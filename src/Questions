@@ -1,0 +1,115 @@
+Problem Set
+
+1. Stream Pipelines with Lambda and Method References
+
+Task: Given a List<Computer> with the following attributes:
+
+	•	String brand
+	•	CPU cpu (with a speed attribute)
+
+Write a stream pipeline that:
+
+	1.	Filters out all computers that are not from Dell.
+	2.	Sorts the remaining computers by cpu.speed in descending order.
+	3.	Collects the results into a List<CPU>.
+
+Bonus: Convert the lambda in your pipeline to use method references wherever possible.
+
+2. Handling Exceptions in Stream Pipelines
+
+Task: Write a stream pipeline that reads from a list of files, each represented by a File object. Each file contains numbers, one per line. Your task is to:
+
+	1.	Parse the numbers from the file.
+	2.	If a file contains invalid numbers, throw and handle a checked NumberFormatException without causing the pipeline to fail.
+
+You will need to handle the exception in the pipeline itself using techniques from Lesson 10.
+
+3. Write a Generic Method
+
+Task: Create a generic method secondLargest(List<T> list) that returns the second largest item in a list. The method should:
+
+	1.	Accept only elements that are Comparable<T>.
+	2.	Handle cases where the list has fewer than two elements by throwing an IllegalArgumentException.
+
+4. Java Interface with Default Methods
+
+Task: You are given the following interface:
+
+public interface Sprite {
+    int getX();
+    int getY();
+    void setX(int x);
+    void setY(int y);
+}
+Write a default method in this interface called move(int deltaX, int deltaY) that adjusts the x and y values by adding deltaX and deltaY to the current x and y.
+
+5. Using reduce()
+
+Task: Given a List<Integer> numbers, write a stream pipeline that:
+
+	1.	Uses reduce() to find the sum of all even numbers in the list.
+	2.	Handles the case where the list is empty by returning 0.
+
+6. Java 8 Multiple Inheritance with Default Methods
+
+Task: You have two interfaces with default methods:
+
+public interface A {
+    default void greet() {
+        System.out.println("Hello from A");
+    }
+}
+
+public interface B {
+    default void greet() {
+        System.out.println("Hello from B");
+    }
+}
+
+Write a class C that implements both interfaces and overrides the greet() method to resolve the conflict and print "Hello from C" instead.
+
+7. JavaFX Conceptual Question
+
+Task: Explain the difference between a Stage and a Scene in JavaFX. Provide an example of how to set up a basic JavaFX window with a Button on it.
+
+8. Method References and Constructor References
+
+Task: Given a List<String> names that contains person names, write a stream pipeline that:
+
+	1.	Converts each name to a Person object using a constructor reference.
+	2.	Collects the list of Person objects into a new list.
+
+The Person class constructor accepts a single argument, name.
+
+9. Singleton with Enum
+
+Task: Implement a singleton using enum in Java. Your singleton should provide a method log(String message) that prints the message.
+
+10. Advanced Stream Processing
+
+Task: Given a List<Order>, write a stream pipeline that:
+
+	1.	Finds all unique customers who placed orders.
+	2.	Filters out customers whose email address ends with a given domain (e.g., "gmail.com").
+	3.	Sorts the remaining customers in descending order by name.
+	4.	Returns a single string containing the first letter of each customer’s name, separated by spaces (e.g., "B A D F").
+
+11. Handling Atomic Operations
+
+Task: Explain what an atomic operation is in the context of multithreading. Write a simple Java program that demonstrates an atomic operation using AtomicInteger to increment a shared counter in a multithreaded environment.
+
+Bonus Challenge
+
+12. Implement a Functional Interface
+
+Task: Implement a custom functional interface TriFunction that takes three arguments of any type and returns a result of any type. Then, write a method that uses this interface to multiply three numbers.
+
+Instructions
+
+	1.	Solve each problem by writing the code for it.
+	2.	Use both lambdas and method references where applicable.
+	3.	Make sure to handle exceptions appropriately, especially in stream pipelines.
+	4.	Ensure your code is generic and flexible wherever required, like in problem #3.
+	5.	Test the atomic operations problem with multiple threads to ensure thread safety.
+
+This set of problems covers all the key topics you need to know for your exam, including streams, lambdas, functional interfaces, exceptions, generics, default methods, and concurrency. Let me know if you need help with any of the solutions!

@@ -1,0 +1,14 @@
+package lesson2.onlineShopPackageRestrict;
+
+public class Item {
+    private String itemName;
+
+    public Item(String itemName) {
+        this.itemName = itemName;
+    }
+
+    @Override
+    public String toString() {
+
+    }
+}
