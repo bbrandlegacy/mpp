@@ -1,0 +1,24 @@
+A)
+    Drug info)
+    name <-> drug number
+    dosage <-> method of admin
+    description -> name
+
+
+    Administration info)
+    (dosage <-> units per day) -> name
+    method of admin <-> (drug number -> name)
+
+B)
+    we have two different things here, drug information, and protocal/administration of the drug
+    so we have two tables first:
+    drug_info, administration
+
+c)
+    so we would have a drug info table:
+    drug_number, name, description, dosage
+    drug_number being the primary key of the table
+
+    prescription table which looks like:
+    prescription_id, drug_number (primary key for drug info table), method_of_admin, start_date, finish_date
+    with prescription_id being the primary key of the table
